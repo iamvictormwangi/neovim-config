@@ -154,7 +154,7 @@ local plugins = {
 
   'iamvictormwangi/better-escape.vim',
   'iamvictormwangi/vim-repeat',
-  "iamvictormwangi/cmp_stylemyapp",
+  "iamvictormwangi/cmp_rusticflow",
 
   -- Markdown
 

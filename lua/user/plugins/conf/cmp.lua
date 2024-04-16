@@ -25,7 +25,7 @@ cmp.setup {
       mode = 'symbol', -- show only symbol annotations
       maxwidth = 50,   -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       menu = ({
-        cmp_stylemyapp = "[ℒ]",
+        rusticflow = "[RF]",
         cmp_dictionary = "[D]",
         nvim_lsp = 'λ',
         luasnip = '⋗',
@@ -71,7 +71,7 @@ cmp.setup {
       name = "dictionary",
       keyword_length = 1,
     },
-    { name = "stylemyapp" },
+    { name = "rusticflow" },
     { name = "cmp-htmx" },
     { name = 'cmp_builtins' },
     { name = 'cmp_dictionary' },

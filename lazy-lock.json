@@ -17,7 +17,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
-  "cmp_stylemyapp": { "branch": "main", "commit": "d1d0f85dc9780ee192756941640dacbcff401bd0" },
+  "cmp_rusticflow": { "branch": "main", "commit": "d139d733ad2a272baa4c83d152d161a8f35dcbb5" },
   "cmp_yanky": { "branch": "main", "commit": "c3d089186ccead26eba01023502f3eeadd7a92d2" },
   "color-picker.nvim": { "branch": "master", "commit": "06cb5f853535dea529a523e9a0e8884cdf9eba4d" },
   "dressing.nvim": { "branch": "master", "commit": "18e5beb3845f085b6a33c24112b37988f3f93c06" },
