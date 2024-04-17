@@ -144,3 +144,8 @@ au BufRead,BufNewFile *.txt,.md set tw=80
 "v
 "gq
 ]])
+
+vim.cmd([[
+set number
+set relativenumber
+]])
