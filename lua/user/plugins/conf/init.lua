@@ -29,7 +29,8 @@ require("lspfuzzy").setup {}
 vim.cmd [[ colorscheme vscode ]]
 
 require("lsp-format").setup {}
-require('cmp_stylemyapp'):setup()
+require('cmp_rusticflow'):setup()
+require('cmp_dictionary'):setup()
 require('guess-indent').setup {}
 require("bufferline").setup {}
 require("bufferline-cycle-windowless").setup({

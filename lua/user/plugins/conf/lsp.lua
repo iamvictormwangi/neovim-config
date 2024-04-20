@@ -19,7 +19,9 @@ local servers = {
   "svelte",
   "rust_analyzer",
   "lua_ls",
-  "tsserver"
+  "tsserver",
+  "jsonls",
+  "remark_ls"
 }
 
 for _, server in ipairs(servers) do

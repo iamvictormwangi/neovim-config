@@ -62,7 +62,6 @@ local plugins = {
 
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
-  'uga-rosa/cmp-dictionary',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-emoji',
@@ -155,6 +154,7 @@ local plugins = {
   'iamvictormwangi/better-escape.vim',
   'iamvictormwangi/vim-repeat',
   "iamvictormwangi/cmp_rusticflow",
+  "iamvictormwangi/cmp_dictionary",
 
   -- Markdown
 
@@ -171,7 +171,6 @@ local plugins = {
 
   "anuvyklack/fold-preview.nvim",
   "anuvyklack/pretty-fold.nvim",
-
 
   'stevearc/oil.nvim',
   'nvim-orgmode/orgmode',

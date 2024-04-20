@@ -26,7 +26,7 @@ cmp.setup {
       maxwidth = 50,   -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       menu = ({
         rusticflow = "[RF]",
-        cmp_dictionary = "[D]",
+        dictionary = "[D]",
         nvim_lsp = 'λ',
         luasnip = '⋗',
         buffer = '﬘',
@@ -67,11 +67,8 @@ cmp.setup {
     end, { 'i', 's' }),
   }),
   sources = {
-    {
-      name = "dictionary",
-      keyword_length = 1,
-    },
     { name = "rusticflow" },
+    { name = "dictionary" },
     { name = "cmp-htmx" },
     { name = 'cmp_builtins' },
     { name = 'cmp_dictionary' },
