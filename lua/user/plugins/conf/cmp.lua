@@ -6,7 +6,6 @@ end
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 local lspkind = require('lspkind')
-require("luasnip.loaders.from_vscode").lazy_load()
 
 -- Add additional capabilities supported by nvim-cmp
 --local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -15,7 +14,7 @@ require("luasnip.loaders.from_vscode").lazy_load()
 --local lspconfig = require('lspconfig')
 
 -- luasnip setup
--- local luasnip = require 'luasnip'
+local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -37,7 +36,7 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      --  luasnip.lsp_expand(args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -68,17 +67,16 @@ cmp.setup {
     end, { 'i', 's' }),
   }),
   sources = {
+    { name = 'nvim_lsp' },
     { name = "rusticflow" },
     { name = "dictionary" },
-    { name = "codeium" },
+    { name = 'luasnip' },
     { name = "cmp-htmx" },
     { name = 'cmp_builtins' },
-    { name = 'cmp_dictionary' },
-    { name = 'nvim_lsp' },
     { name = "buffer" },
     { name = "path" },
-    { name = "luasnip" },
     { name = 'emoji' },
+    { name = "codeium" },
   },
   window = {
     documentation = cmp.config.window.bordered()

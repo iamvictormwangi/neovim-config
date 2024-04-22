@@ -20,13 +20,16 @@ local plugins = {
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
-  'L3MON4D3/LuaSnip',
+  {
+    'L3MON4D3/LuaSnip',
+    config = function()
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end
+  },
   'rafamadriz/friendly-snippets',
   'saadparwaiz1/cmp_luasnip',
   'chrisgrieser/cmp_yanky',
-
   'mhinz/vim-startify',
-
   {
     'uloco/bluloco.nvim',
     lazy = false,
@@ -371,20 +374,6 @@ local plugins = {
     end
   },
   {
-    'karb94/neoscroll.nvim',
-    config = function()
-      require('neoscroll').setup({
-        mappings = { '<C-u>', '<C-d>', '<C-b>', '<C-f>',
-          '<C-y>', '<C-e>', 'zt', 'zz', 'zb' },
-        hide_cursor = true,          -- Hide cursor while scrolling
-        stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-        respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
-        cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-        performance_mode = true,     -- Disable "Performance Mode" on all buffers.
-      })
-    end
-  },
-  {
     'numToStr/Comment.nvim',
     config = function()
       require("Comment").setup()
@@ -392,7 +381,6 @@ local plugins = {
   },
   'tpope/vim-obsession',
   'tpope/vim-surround',
-  'mattn/emmet-vim',
   'alvan/vim-closetag',
   'panozzaj/vim-autocorrect',
   'preservim/tagbar',
@@ -448,6 +436,19 @@ local plugins = {
     end
   },
   'lukas-reineke/indent-blankline.nvim',
+  {
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require("toggleterm").setup {
+        shade_terminals = true,
+        shading_factor = '10',
+        start_in_insert = true,
+        border = 'curved',
+        direction = 'float',
+        auto_scroll = true, -- automatically scroll to the bottom on terminal output
+      }
+    end
+  },
 }
 
 local user_plugins = require("user_config.plugins")

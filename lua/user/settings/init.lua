@@ -135,14 +135,6 @@ vim.opt.termguicolors = true
 vim.cmd([[
 set winbar=%f
 set spell
-
-au BufNewFile,BufRead *.ejs set filetype=html
-au BufRead,BufNewFile *.txt,.md set wrap linebreak
-au BufRead,BufNewFile *.txt,.md set tw=80
-
-" for formatting
-"v
-"gq
 ]])
 
 vim.cmd([[
@@ -153,4 +145,4 @@ set modifiable
 
 ]])
 
-require("user_config.general")
+vim.cmd [[ set termguicolors ]]

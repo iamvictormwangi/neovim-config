@@ -27,4 +27,6 @@ return {
   { mode = "i", keys = "<c-o>",            action = "<c-y>0" },
   { mode = "n", keys = "<leader><leader>", action = "<cmd>WhichKey<cr>" },
   { mode = "n", keys = "<leader>p",        action = "<cmd>%!prettier --print-width=100 --tab-width=2 --semi=true --stdin-filepath=%<Cr>" },
+  { mode = "n", keys = "<c-k>",            action = "<c-e>" },
+  { mode = "n", keys = "<c-j>",            action = "<c-y>" },
 }
