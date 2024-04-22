@@ -148,4 +148,9 @@ au BufRead,BufNewFile *.txt,.md set tw=80
 vim.cmd([[
 set number
 set relativenumber
+
+set modifiable
+
 ]])
+
+require("user_config.general")

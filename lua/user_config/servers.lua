@@ -1,0 +1,19 @@
+return {
+  "gopls",
+  "bashls",
+  "clangd",
+  "cssls",
+  "cssmodules_ls",
+  "htmx",
+  "css_variables",
+  "emmet_ls",
+  "html",
+  "intelephense",
+  "pylsp",
+  "svelte",
+  "rust_analyzer",
+  "lua_ls",
+  "tsserver",
+  "jsonls",
+  "remark_ls"
+}

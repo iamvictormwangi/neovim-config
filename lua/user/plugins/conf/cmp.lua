@@ -6,6 +6,7 @@ end
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 local lspkind = require('lspkind')
+require("luasnip.loaders.from_vscode").lazy_load()
 
 -- Add additional capabilities supported by nvim-cmp
 --local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -69,6 +70,7 @@ cmp.setup {
   sources = {
     { name = "rusticflow" },
     { name = "dictionary" },
+    { name = "codeium" },
     { name = "cmp-htmx" },
     { name = 'cmp_builtins' },
     { name = 'cmp_dictionary' },

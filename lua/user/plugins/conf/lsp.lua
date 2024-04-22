@@ -1,30 +1,8 @@
 -- require("lsp-inlayhints").on_attach(client, bufnr)
-require("user.plugins.conf.cmp")
 
 local lspconfig = require('lspconfig')
-local lspfuzzy = require('lspfuzzy')
 
-local servers = {
-  "gopls",
-  "bashls",
-  "clangd",
-  "cssls",
-  "cssmodules_ls",
-  "htmx",
-  "css_variables",
-  "emmet_ls",
-  "html",
-  "intelephense",
-  "pylsp",
-  "svelte",
-  "rust_analyzer",
-  "lua_ls",
-  "tsserver",
-  "jsonls",
-  "remark_ls"
-}
-
-for _, server in ipairs(servers) do
+for _, server in ipairs(require("user_config.servers")) do
   lspconfig[server].setup {
     on_attach = require("lsp-format").on_attach
   }
@@ -58,7 +36,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
-
-require("user.plugins.conf.lsp_kind")
-require("user.plugins.conf.lsp_saga")
-require("user.plugins.conf.lsp_signatures")

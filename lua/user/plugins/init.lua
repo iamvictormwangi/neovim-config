@@ -1,2 +1,7 @@
 require("user.plugins.conf.lazy")
-require("user.plugins.conf")
+require("user.plugins.conf.cmp")
+require("user.plugins.conf.dressing_nvim")
+require("user.plugins.conf.ibl")
+require("user.plugins.conf.lsp")
+require("user.plugins.conf.lsp_signatures")
+require("user.plugins.conf.nvim_tree")
