@@ -2,6 +2,7 @@
 
 return {
   "python",
+  "markdown",
   "rust",
   "java",
   "javascript",

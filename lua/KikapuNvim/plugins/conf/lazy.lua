@@ -490,6 +490,12 @@ local plugins = {
       }
     end
   },
+  {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require('neoscroll').setup {}
+    end
+  }
 }
 
 local user_plugins = require("user.plugins")

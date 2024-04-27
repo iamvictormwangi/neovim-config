@@ -55,6 +55,12 @@ local supported_languages = {
     compiled = false
   },
   {
+    name = "markdown",
+    extension = "md",
+    run = "MarkdownPreview",
+    compiled = false
+  },
+  {
     name = "html",
     extension = "html",
     run = "xdg-open %",
