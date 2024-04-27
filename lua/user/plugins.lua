@@ -1,3 +1,5 @@
+-- Add your plugins here
+
 return {
   {
     'ray-x/web-tools.nvim',

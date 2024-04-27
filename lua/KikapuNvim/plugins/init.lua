@@ -1,0 +1,7 @@
+require("KikapuNvim.plugins.conf.lazy")
+require("KikapuNvim.plugins.conf.cmp")
+require("KikapuNvim.plugins.conf.dressing_nvim")
+require("KikapuNvim.plugins.conf.ibl")
+require("KikapuNvim.plugins.conf.lsp")
+require("KikapuNvim.plugins.conf.lsp_signatures")
+require("KikapuNvim.plugins.conf.nvim_tree")

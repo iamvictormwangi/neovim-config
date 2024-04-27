@@ -1,7 +1,7 @@
-require("user.settings")
-require("user.plugins")
-require("user.mappings")
+require("KikapuNvim.settings")
+require("KikapuNvim.plugins")
+require("KikapuNvim.mappings")
 
 -- enable user settings
 
-require("user_config.general")
+require("user.general")

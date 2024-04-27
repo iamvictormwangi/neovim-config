@@ -108,7 +108,6 @@ o.shiftwidth          = 2
 
 o.mouse               = 'a'
 opt.mousefocus        = true
-opt.mousemoveevent    = true
 
 -- Completion and language
 
@@ -132,10 +131,7 @@ o.ls                  = 0
 
 vim.opt.termguicolors = true
 
-vim.cmd([[
-set winbar=%f
-set spell
-]])
+vim.cmd [[ set spell ]]
 
 vim.cmd([[
 set number
@@ -146,3 +142,5 @@ set modifiable
 ]])
 
 vim.cmd [[ set termguicolors ]]
+
+vim.cmd [[ filetype on ]]

@@ -2,7 +2,7 @@
 
 local lspconfig = require('lspconfig')
 
-for _, server in ipairs(require("user_config.servers")) do
+for _, server in ipairs(require("user.servers")) do
   lspconfig[server].setup {
     on_attach = require("lsp-format").on_attach
   }

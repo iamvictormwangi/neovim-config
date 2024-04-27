@@ -1,5 +1,7 @@
+-- Add lsp servers here
+-- By default KikapuNvim does not come with any servers
+
 return {
-  "gopls",
   "bashls",
   "clangd",
   "cssls",
@@ -8,12 +10,10 @@ return {
   "css_variables",
   "emmet_ls",
   "html",
-  "intelephense",
   "pylsp",
-  "svelte",
   "rust_analyzer",
   "lua_ls",
   "tsserver",
   "jsonls",
-  "remark_ls"
+  "remark_ls",
 }
