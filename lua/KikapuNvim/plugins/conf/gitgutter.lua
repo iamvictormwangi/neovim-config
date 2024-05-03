@@ -1,1 +1,0 @@
--- This has to be on for gitgutter plugin to work

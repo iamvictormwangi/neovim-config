@@ -2,7 +2,7 @@
 
 vim.o.background = 'dark'
 
-vim.cmd [[ colorscheme bluloco  ]]
+vim.cmd [[ colorscheme catppuccin  ]]
 
 vim.cmd [[ set signcolumn=yes ]]
 vim.cmd [[ set termguicolors ]]

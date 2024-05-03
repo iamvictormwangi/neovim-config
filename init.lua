@@ -1,7 +1,6 @@
 require("KikapuNvim.settings")
-require("KikapuNvim.plugins")
-require("KikapuNvim.mappings")
+require("KikapuNvim.config.lazy")
 
--- enable user settings
+require("KikapuNvim.mappings")
 
 require("user.general")

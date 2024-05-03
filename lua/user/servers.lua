@@ -16,4 +16,5 @@ return {
   "tsserver",
   "jsonls",
   "remark_ls",
+  "somesass_ls"
 }

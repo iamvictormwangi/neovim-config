@@ -4,7 +4,58 @@ local opt = vim.opt
 local cmd = vim.cmd
 local g = vim.g
 
-cmd [[ set clipboard+=unnamedplus ]]
+-- enable gruvbox colorscheme
+
+vim.o.background = "dark" -- or "light" for light mode
+
+-- Check if the bluloco colorscheme is loaded
+local function is_bluloco_loaded()
+	return vim.fn.exists("syntax#load#colorscheme") == 1 and vim.g.colors_name == "bluloco"
+end
+
+-- Set the bluloco colorscheme if it's loaded
+if is_bluloco_loaded() then
+	vim.cmd("colorscheme bluloco")
+	vim.cmd([[colorscheme bluloco ]])
+end
+
+-- Hide mode
+opt.showmode = false
+
+-- Enable break indent
+opt.breakindent = true
+
+opt.undofile = true
+opt.undodir = "$HOME/.vim/undo"
+
+-- Searching
+
+o.hlsearch = false
+o.updatetime = 250
+o.ignorecase = true
+o.ignorecase = true
+o.smartcase = true
+
+-- enable sign column
+wo.signcolumn = "yes"
+o.synmaxcol = 280
+
+-- use global keyboard
+
+opt.clipboard = "unnamedplus"
+
+-- cmd [[ set clipboard+=unnamedplus ]]
+
+-- Sets how neovim will display certain whitespace characters in the editor.
+
+opt.list = true
+opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Show which line your cursor is on
+vim.opt.cursorline = true
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = "split"
 
 -- Disable vim builtins for faster startup time
 
@@ -31,25 +82,16 @@ cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
 
 -- Highligh yanked text
 
-cmd [[
+cmd([[
 augroup highlight_yank
 autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=350})
 augroup END
-]]
-
--- Enable undo files
-
-cmd([[
-
-set undodir=$HOME/.vim/undo
-set undofile
-
 ]])
 
 -- Disable annoying swap files
 
-cmd [[set noswapfile]]
+cmd([[set noswapfile]])
 
 -- Remove trailing whitespace on save
 
@@ -68,7 +110,7 @@ au BufWinEnter * silent! loadview
 
 -- Use global clipboard
 
-cmd [[
+cmd([[
 " Use the system clipboard for copy and paste operations
 set clipboard=unnamedplus
 
@@ -77,61 +119,55 @@ vnoremap <C-c> "+y
 
 " Enable pasting from the system clipboard in insert mode
 inoremap <C-v> <C-r>+
-]]
-
+]])
 
 -- save currently buffer whenever i am switching buffers
 
-cmd [[ set autowriteall ]]
-
--- Searching
-
-o.hlsearch            = false
-o.updatetime          = 250
-o.ignorecase          = true
-o.ignorecase          = true
-o.smartcase           = true
-o.smartcase           = true
-wo.signcolumn         = 'auto'
-o.synmaxcol           = 240
+cmd([[ set autowriteall ]])
 
 -- Indenting
 
-o.smarttab            = true
-o.smartindent         = true
-o.expandtab           = true
-o.tabstop             = 2
-o.softtabstop         = 2
-o.shiftwidth          = 2
+o.smarttab = true
+o.smartindent = true
+o.expandtab = true
+o.tabstop = 2
+o.softtabstop = 2
+o.shiftwidth = 2
 
 -- Add Mouse support
 
-o.mouse               = 'a'
-opt.mousefocus        = true
+o.mouse = "a"
+opt.mousefocus = true
 
 -- Completion and language
 
-o.completeopt         = "menuone,noinsert,noselect"
-o.wildmode            = "longest,full"
-o.fileencoding        = "utf-8"
-o.spell               = false
-opt.completeopt       = "menu,menuone,noselect"
+o.completeopt = "menuone,noinsert,noselect"
+o.wildmode = "longest,full"
+o.fileencoding = "utf-8"
+o.spell = false
+opt.completeopt = "menu,menuone,noselect"
 
 -- General
 
-o.splitbelow          = true
-o.splitright          = true
-o.scrolloff           = 12
-o.sidescrolloff       = 8
---o.hidden = true
-o.lazyredraw          = true
-o.wrap                = true
+-- Handle splits
+
+o.splitbelow = true
+o.splitright = true
+
+-- Scrolling
+
+o.scrolloff = 12
+o.sidescrolloff = 8
+
+o.hidden = true
+
+o.lazyredraw = false
+o.wrap = true
+
 --o.cmdheight = 0
-o.ls                  = 0
+o.ls = 0
 
-vim.opt.termguicolors = true
-
-vim.cmd [[ set spell ]]
+vim.cmd([[ set spell ]])
 
 vim.cmd([[
 set number
@@ -141,6 +177,20 @@ set modifiable
 
 ]])
 
-vim.cmd [[ set termguicolors ]]
+vim.cmd([[ set termguicolors ]])
 
-vim.cmd [[ filetype on ]]
+vim.cmd([[ filetype on ]])
+
+vim.cmd([[
+
+function! DisableSyntaxForLargeFiles()
+    if getfsize(expand('%')) > 5000000 " Adjust the size threshold as needed
+        syntax off
+    else
+        syntax enable
+    endif
+endfunction
+
+autocmd BufEnter * call DisableSyntaxForLargeFiles()
+
+]])
