@@ -5,5 +5,7 @@ return {
       require('guess-indent').setup {}
     end
   },
-  'lukas-reineke/indent-blankline.nvim',
+  "lukas-reineke/indent-blankline.nvim",
+  "echasnovski/mini.indentscope",
+
 }

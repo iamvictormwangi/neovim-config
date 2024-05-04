@@ -29,4 +29,10 @@ return {
 			require("color-picker").setup()
 		end,
 	},
+	"weilbith/nvim-code-action-menu",
+	"SmiteshP/nvim-navbuddy",
+	"nvim-neotest/nvim-nio",
+	"SmiteshP/nvim-navic",
+	"MunifTanjim/nui.nvim",
+	"nvim-lua/plenary.nvim",
 }

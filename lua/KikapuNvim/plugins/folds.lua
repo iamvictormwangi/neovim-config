@@ -11,4 +11,5 @@ return {
 			require("pretty-fold").setup()
 		end,
 	},
+	"kevinhwang91/nvim-ufo"
 }

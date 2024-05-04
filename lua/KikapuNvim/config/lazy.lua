@@ -12,8 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("KikapuNvim.plugins")
-require("lazy").setup("KikapuNvim.config.cmp")
-require("lazy").setup("KikapuNvim.config.ibl")
-require("lazy").setup("KikapuNvim.config.lsp")
-require("lazy").setup("KikapuNvim.config.lsp_signatures")
+
+require("KikapuNvim.config.cmp")
+require("KikapuNvim.config.ibl")
+require("KikapuNvim.config.lsp")
+
 -- require("config.cmp") e

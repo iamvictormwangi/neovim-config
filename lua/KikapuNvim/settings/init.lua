@@ -8,17 +8,6 @@ local g = vim.g
 
 vim.o.background = "dark" -- or "light" for light mode
 
--- Check if the bluloco colorscheme is loaded
-local function is_bluloco_loaded()
-	return vim.fn.exists("syntax#load#colorscheme") == 1 and vim.g.colors_name == "bluloco"
-end
-
--- Set the bluloco colorscheme if it's loaded
-if is_bluloco_loaded() then
-	vim.cmd("colorscheme bluloco")
-	vim.cmd([[colorscheme bluloco ]])
-end
-
 -- Hide mode
 opt.showmode = false
 
@@ -103,8 +92,6 @@ cmd([[
 
 set foldenable
 set foldmethod=manual
-au BufWinLeave * mkview
-au BufWinEnter * silent! loadview
 
 ]])
 
@@ -164,18 +151,11 @@ o.hidden = true
 o.lazyredraw = false
 o.wrap = true
 
---o.cmdheight = 0
-o.ls = 0
-
 vim.cmd([[ set spell ]])
 
-vim.cmd([[
-set number
-set relativenumber
+vim.cmd([[ set number ]])
 
-set modifiable
-
-]])
+vim.cmd([[ set relativenumber ]])
 
 vim.cmd([[ set termguicolors ]])
 
@@ -184,7 +164,7 @@ vim.cmd([[ filetype on ]])
 vim.cmd([[
 
 function! DisableSyntaxForLargeFiles()
-    if getfsize(expand('%')) > 5000000 " Adjust the size threshold as needed
+    if getfsize(expand('%')) > 1000000 " Adjust the size threshold as needed
         syntax off
     else
         syntax enable

@@ -73,10 +73,4 @@ return {
 		end,
 	},
 	"ray-x/lsp_signature.nvim",
-	"weilbith/nvim-code-action-menu",
-	"SmiteshP/nvim-navbuddy",
-	"nvim-neotest/nvim-nio",
-	"SmiteshP/nvim-navic",
-	"MunifTanjim/nui.nvim",
-	"nvim-lua/plenary.nvim",
 }
