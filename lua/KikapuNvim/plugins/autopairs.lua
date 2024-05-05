@@ -10,4 +10,5 @@ return {
       }
     end
   },
+  'ukiuki-engineer/vim-autoclose'
 }

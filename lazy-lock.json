@@ -69,6 +69,7 @@
   "tree-sitter-embedded-template": { "branch": "master", "commit": "6d791b897ecda59baa0689a85a9906348a2a6414" },
   "trouble.nvim": { "branch": "main", "commit": "b9cf677f20bb2faa2dacfa870b084e568dca9572" },
   "url-open": { "branch": "main", "commit": "9f8f4a56ac709f26aa17d8ef921b272bf2262a30" },
+  "vim-autoclose": { "branch": "master", "commit": "520b345f66721c66e6430bf5aad7502a3466d28a" },
   "vim-autocorrect": { "branch": "master", "commit": "28ef54d5cdd2d1021d54c90d80eb1a7d02fb58bc" },
   "vim-closetag": { "branch": "master", "commit": "d0a562f8bdb107a50595aefe53b1a690460c3822" },
   "vim-fugitive": { "branch": "master", "commit": "ce882460cf3db12e99f8bf579cbf99e331f6dd4f" },
