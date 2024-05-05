@@ -17,7 +17,7 @@ g.mapleader = " "
 g.maplocalleader = " "
 
 for _, mapping in ipairs(require("user.mappings")) do
-	vim.api.nvim_set_keymap(mapping.mode, mapping.keys, mapping.action, { noremap = true, silent = true })
+ vim.api.nvim_set_keymap(mapping.mode, mapping.keys, mapping.action, { noremap = true, silent = true })
 end
 
 vim.cmd([[command! KikapuReload source ~/.config/nvim/init.lua ]])

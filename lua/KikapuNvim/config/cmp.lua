@@ -26,7 +26,7 @@ cmp.setup {
       maxwidth = 50,   -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       menu = ({
         rusticflow = "[RF]",
-        dictionary = "[D]",
+        iamvictormwangi_dictionary = "[Dic]",
         nvim_lsp = 'λ',
         luasnip = '⋗',
         buffer = '﬘',

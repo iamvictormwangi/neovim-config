@@ -6,6 +6,10 @@ return {
     end
   },
   "lukas-reineke/indent-blankline.nvim",
-  "echasnovski/mini.indentscope",
-
+  {
+    "echasnovski/mini.indentscope",
+    config = function()
+      require('mini.indentscope').setup()
+    end
+  }
 }
