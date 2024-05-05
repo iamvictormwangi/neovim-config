@@ -26,5 +26,7 @@ vim.cmd([[command! KikapuHome Startify ]])
 vim.cmd([[ noremap <leader>c gcc ]])
 vim.cmd([[ noremap <leader>r <cmd>KikapuReload<cr> ]])
 
-vim.api.nvim_set_keymap('i', '<C-o>', '<C-o>:call emmet#expandAbbrIntelligent(0,"i")<CR>',
- { noremap = true, silent = true, expr = true })
+vim.cmd [[
+let g:user_emmet_expandabbr_key='<C-o>'
+imap <expr> <C-o> emmet#expandAbbrIntelligent("\<C-o>")
+ ]]
