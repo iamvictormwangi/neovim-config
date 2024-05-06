@@ -4,6 +4,11 @@ local opt = vim.opt
 local cmd = vim.cmd
 local g = vim.g
 
+-- Leader Key
+
+g.mapleader = " "
+g.maplocalleader = " "
+
 -- enable gruvbox colorscheme
 
 vim.o.background = "dark" -- or "light" for light mode
