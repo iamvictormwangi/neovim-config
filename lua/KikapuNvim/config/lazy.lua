@@ -17,4 +17,9 @@ require("KikapuNvim.config.cmp")
 require("KikapuNvim.config.ibl")
 require("KikapuNvim.config.lsp")
 
+vim.cmd [[
+autocmd BufNewFile,BufRead *.jinja set filetype=jinja
+autocmd FileType jinja setlocal shiftwidth=2 tabstop=2 softtabstop=2
+]]
+
 -- require("config.cmp") e

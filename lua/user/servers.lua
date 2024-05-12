@@ -16,5 +16,9 @@ return {
   "tsserver",
   "jsonls",
   "remark_ls",
-  "somesass_ls"
+  "somesass_ls",
+  "jinja_lsp",
+  "sqlls",
+  -- "sqls",
+  "tailwindcss",
 }

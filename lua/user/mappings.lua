@@ -5,7 +5,7 @@
 
 return {
   { mode = "n", keys = "<leader>q",        action = "<cmd>q<cr>" },
-  { mode = "n", keys = "<leader>w",        action = "<cmd>w<cr>" },
+  { mode = "n", keys = "<leader>w",        action = "<cmd>w!<cr>" },
   { mode = "v", keys = "<Tab>",            action = "g>>" },
   { mode = "n", keys = "<Tab>",            action = ">>" },
   { mode = "v", keys = ">",                action = ">gv" },

@@ -1,10 +1,14 @@
--- require("lsp-inlayhints").on_attach(client, bufnr)
-
 local lspconfig = require('lspconfig')
 
 for _, server in ipairs(require("user.servers")) do
   lspconfig[server].setup {
-    on_attach = require("lsp-format").on_attach
+    -- on_attach = function(client, buffr)
+    on_attach = function(client, bufnr)
+      require "lsp-format".on_attach(client, bufnr)
+      require "lsp_signature".on_attach(signature_setup, bufnr);
+      require("lsp-inlayhints").on_attach(client, bufnr)
+    end,
+    root_dir = vim.loop.cwd
   }
 end
 
