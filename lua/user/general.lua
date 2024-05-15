@@ -2,7 +2,7 @@
 
 vim.o.background = 'dark'
 
-vim.cmd [[ colorscheme catppuccin  ]]
+vim.cmd [[ colorscheme gruvbox  ]]
 
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-e>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-u>', { noremap = true })
@@ -16,5 +16,6 @@ vim.cmd [[
 
 
 vim.cmd [[
-  let g:user_emmet_leader_key='<C-Z>'
+  autocmd BufNewFile,BufRead *.jinja set filetype=jinja
+  autocmd FileType jinja setlocal shiftwidth=2 tabstop=2 softtabstop=2
 ]]

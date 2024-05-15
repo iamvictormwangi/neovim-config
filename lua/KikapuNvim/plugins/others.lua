@@ -35,4 +35,5 @@ return {
 	"SmiteshP/nvim-navic",
 	"MunifTanjim/nui.nvim",
 	"nvim-lua/plenary.nvim",
+	"panozzaj/vim-autocorrect"
 }

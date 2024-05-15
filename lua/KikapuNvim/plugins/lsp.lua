@@ -72,5 +72,4 @@ return {
 			require("lspfuzzy").setup({})
 		end,
 	},
-	"ray-x/lsp_signature.nvim",
 }

@@ -11,7 +11,9 @@ g.maplocalleader = " "
 
 -- enable gruvbox colorscheme
 
-vim.o.background = "dark" -- or "light" for light mode
+vim.o.background = 'dark'
+
+-- vim.cmd [[ colorscheme gruvbox  ]]
 
 -- Hide mode
 opt.showmode = false

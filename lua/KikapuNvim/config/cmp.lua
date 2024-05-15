@@ -68,15 +68,14 @@ cmp.setup {
   }),
   sources = {
     { name = 'nvim_lsp' },
-    { name = "rusticflow" },
-    { name = "dictionary" },
+    { name = "iamvictormwangi_dictionary" },
     { name = 'luasnip' },
+    { name = "rusticflow" },
     { name = "cmp-htmx" },
     { name = 'cmp_builtins' },
     { name = "buffer" },
     { name = "path" },
     { name = 'emoji' },
-    { name = "codeium" },
   },
   window = {
     documentation = cmp.config.window.bordered()
