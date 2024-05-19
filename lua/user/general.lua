@@ -2,7 +2,7 @@
 
 vim.o.background = 'dark'
 
-vim.cmd [[ colorscheme gruvbox  ]]
+vim.cmd [[ colorscheme dark-gruvbox  ]]
 
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-e>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-u>', { noremap = true })

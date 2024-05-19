@@ -1,8 +1,8 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "iamvictormwangi/dark-gruvbox",
     config = function()
-      require("gruvbox").setup({})
+      require("dark-gruvbox").setup({})
     end,
   },
   {

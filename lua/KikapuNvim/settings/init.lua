@@ -13,8 +13,6 @@ g.maplocalleader = " "
 
 vim.o.background = 'dark'
 
--- vim.cmd [[ colorscheme gruvbox  ]]
-
 -- Hide mode
 opt.showmode = false
 
@@ -22,7 +20,7 @@ opt.showmode = false
 opt.breakindent = true
 
 opt.undofile = true
-opt.undodir = "$HOME/.vim/undo"
+opt.undodir = ".vim"
 
 -- Searching
 

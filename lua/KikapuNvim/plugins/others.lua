@@ -3,8 +3,8 @@ return {
 	"tpope/vim-obsession",
 	"tpope/vim-surround",
 	"alvan/vim-closetag",
-	"panozzaj/vim-autocorrect",
 	"preservim/tagbar",
+	"panozzaj/vim-autocorrect",
 	{
 		"rcarriga/nvim-notify",
 		config = function()
@@ -12,6 +12,7 @@ return {
 				background_colour = "#000000",
 			})
 		end,
+		enabled = false
 	},
 	"iamvictormwangi/better-escape.vim",
 	"iamvictormwangi/vim-repeat",
@@ -35,5 +36,4 @@ return {
 	"SmiteshP/nvim-navic",
 	"MunifTanjim/nui.nvim",
 	"nvim-lua/plenary.nvim",
-	"panozzaj/vim-autocorrect"
 }
