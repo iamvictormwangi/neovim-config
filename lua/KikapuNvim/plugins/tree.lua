@@ -1,11 +1,5 @@
 return {
 	{
-		'stevearc/oil.nvim',
-		opts = {},
-		-- Optional dependencies
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
 			require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS

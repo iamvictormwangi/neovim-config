@@ -5,11 +5,11 @@ return {
 	"hrsh7th/cmp-path",
 	{
 		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
-	"rafamadriz/friendly-snippets",
 	"saadparwaiz1/cmp_luasnip",
 	"chrisgrieser/cmp_yanky",
 	"yochem/cmp-htmx",
@@ -20,11 +20,4 @@ return {
 			require("cmp_rusticflow"):setup()
 		end,
 	},
-	{
-		"iamvictormwangi/cmp_dictionary",
-		config = function()
-			require("cmp_dictionary"):setup()
-		end,
-	},
-	"yochem/cmp-htmx",
 }
