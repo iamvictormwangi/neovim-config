@@ -21,4 +21,5 @@ return {
   "sqlls",
   -- "sqls",
   "tailwindcss",
+  "intelephense"
 }

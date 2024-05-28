@@ -11,8 +11,6 @@ local g = vim.g
 local api = vim.api
 local keymap = vim.api.nvim_set_keymap
 
-
-
 for _, mapping in ipairs(require("user.mappings")) do
  vim.api.nvim_set_keymap(mapping.mode, mapping.keys, mapping.action, { noremap = true, silent = true })
 end

@@ -16,6 +16,14 @@ vim.cmd [[
 
 
 vim.cmd [[
-  autocmd BufNewFile,BufRead *.jinja set filetype=jinja
+  augroup filetypedetect
+    au! BufRead,BufNewFile *.jinja,*.jinja2 set filetype=jinja
+  augroup END
   autocmd FileType jinja setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+  " Define the command to run djhtml and optionally force writing with ! if provided
+command! -bang -nargs=0 DjHtmlFormat execute 'silent! !djhtml' fnameescape(expand('%')) '<bang>'
+
+  " Trigger DjHtmlFormat command on BufWritePre for the specified filetypes
+autocmd BufWritePre *.html,*.htm,*.jsp,*.php,*.djhtml,*.jinja,*.jinja2 :DjHtmlFormat!
 ]]
