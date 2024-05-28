@@ -25,3 +25,5 @@ vim.cmd [[
 let g:user_emmet_expandabbr_key='<C-o>'
 imap <expr> <C-o> emmet#expandAbbrIntelligent("\<C-o>")
  ]]
+
+vim.cmd([[ noremap <C-p> <cmd>DjHtmlFormat<cr> ]])
