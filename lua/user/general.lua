@@ -6,6 +6,7 @@ vim.cmd [[ colorscheme dark-gruvbox  ]]
 
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-e>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-u>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>DjHtmlFormat<Cr>', { noremap = true })
 
 vim.cmd [[
   let g:mkdp_auto_start = 0
@@ -17,7 +18,7 @@ vim.cmd [[
 
 vim.cmd [[
   augroup filetypedetect
-    au! BufRead,BufNewFile *.jinja,*.jinja2 set filetype=jinja
+    au! BufRead,BufNewFile *.html.jinja,*.jinja,*.jinja2 set filetype=jinja
   augroup END
   autocmd FileType jinja setlocal shiftwidth=2 tabstop=2 softtabstop=2
 

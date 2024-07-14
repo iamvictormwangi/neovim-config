@@ -20,4 +20,10 @@ return {
 			require("cmp_rusticflow"):setup()
 		end,
 	},
+	{
+		"iamvictormwangi/cmp_dictionary",
+		config = function()
+			require("cmp_dictionary"):setup()
+		end,
+	}
 }

@@ -1,12 +1,9 @@
 return {
   {
-    'nvim-lualine/lualine.nvim',
-    config = function()
-      require('lualine').setup {
-        options = {
-          theme = 'auto'
-        }
-      }
+    'freddiehaddad/feline.nvim',
+    opts = {},
+    config = function(_, opts)
+      require('feline').setup()
     end
-  },
+  }
 }

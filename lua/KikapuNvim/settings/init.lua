@@ -38,7 +38,7 @@ o.synmaxcol = 280
 
 opt.clipboard = "unnamedplus"
 
--- cmd [[ set clipboard+=unnamedplus ]]
+cmd [[ set clipboard+=unnamedplus ]]
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 

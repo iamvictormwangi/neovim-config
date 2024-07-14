@@ -3,7 +3,6 @@
 
 return {
   "bashls",
-  "clangd",
   "cssls",
   "cssmodules_ls",
   "htmx",
@@ -19,7 +18,6 @@ return {
   "somesass_ls",
   "jinja_lsp",
   "sqlls",
-  -- "sqls",
-  "tailwindcss",
-  "intelephense"
+  "intelephense",
+  "clangd",
 }
