@@ -214,11 +214,6 @@ return {
 						trash = true,
 					},
 				},
-				experimental = {
-					git = {
-						async = false,
-					},
-				},
 				log = {
 					enable = false,
 					truncate = false,
